@@ -1,1 +1,8 @@
+fastapi
+uvicorn
+jinja2
+python-multipart
+pyjwt
+httpx
+cachetools
 
