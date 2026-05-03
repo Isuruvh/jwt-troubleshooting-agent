@@ -1,1 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Validation Results</h2>
 
+<h3>Decoded Token</h3>
+<pre>{{ decoded | tojson(indent=2) }}</pre>
+
+<h3>Claim Validation</h3>
+<pre>{{ claims_result | tojson(indent=2) }}</pre>
+
+<h3>Signature Verification</h3>
+<pre>{{ signature_result | tojson(indent=2) }}</pre>
+
+<h3>Troubleshooting</h3>
+<ul>
+    {% for issue in troubleshooting_result.issues %}
+        <li>{{ issue }}</li>
+    {% endfor %}
+</ul>
+
+<a href="/">Validate another token</a>
+{% endblock %}

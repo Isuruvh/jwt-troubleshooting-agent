@@ -2,7 +2,7 @@ fastapi
 uvicorn
 jinja2
 python-multipart
-pyjwt
+pyjwt[crypto]
 httpx
 cachetools
 

@@ -1,1 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Token Validation & Troubleshooting Agent</h2>
 
+<form action="/validate" method="post">
+    <textarea name="token" placeholder="Paste your JWT here"></textarea>
+    <button type="submit">Validate Token</button>
+</form>
+{% endblock %}
