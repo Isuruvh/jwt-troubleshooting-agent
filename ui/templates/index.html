@@ -3,7 +3,20 @@
 <h2>Token Validation & Troubleshooting Agent</h2>
 
 <form action="/validate" method="post">
+
+    <label for="token">JWT Token</label>
     <textarea name="token" placeholder="Paste your JWT here"></textarea>
+
+    <label for="jwks_url">JWKS URL (Optional)</label>
+    <input type="text" name="jwks_url" placeholder="https://your-idp/.well-known/jwks.json">
+
+    <label for="secret">HMAC Secret (Optional)</label>
+    <input type="text" name="secret" placeholder="Only for HS256/384/512 tokens">
+
+    <label for="manual_public_key">Manual Public Key (PEM) — Optional</label>
+    <textarea name="manual_public_key" rows="8" placeholder="-----BEGIN PUBLIC KEY-----"></textarea>
+
     <button type="submit">Validate Token</button>
 </form>
+
 {% endblock %}

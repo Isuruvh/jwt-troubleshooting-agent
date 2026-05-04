@@ -11,6 +11,21 @@
 <h3>Signature Verification</h3>
 <pre>{{ signature_result | tojson(indent=2) }}</pre>
 
+{% if jwks_url %}
+<h3>JWKS URL Used</h3>
+<pre>{{ jwks_url }}</pre>
+{% endif %}
+
+{% if manual_public_key %}
+<h3>Manual Public Key (PEM)</h3>
+<pre>{{ manual_public_key }}</pre>
+{% endif %}
+
+{% if secret %}
+<h3>HMAC Secret Used</h3>
+<pre>{{ secret }}</pre>
+{% endif %}
+
 <h3>Troubleshooting</h3>
 <ul>
     {% for issue in troubleshooting_result.issues %}
