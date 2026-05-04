@@ -1,5 +1,3 @@
-## `https://dummyimage.com/1200x250/1a1a1a/ffffff&text=JWT+Troubleshooting+Agent`
-
 # **JWT Troubleshooting Agent**
 
 A FastAPI‑powered web tool that decodes, validates, and troubleshoots JSON Web Tokens (JWTs).  
